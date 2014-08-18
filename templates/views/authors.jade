@@ -1,0 +1,7 @@
+extends ../layouts/default
+include ../mixins/author-mixin
+
+
+block content
+	each authorData in data.authors
+		+authorBlock(authorData)

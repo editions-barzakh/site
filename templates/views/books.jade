@@ -1,0 +1,6 @@
+extends ../layouts/default
+include ../mixins/book-mixin
+
+block content
+	each bookData in data.books
+		+bookBlock(bookData)

@@ -1,0 +1,9 @@
+extends ../layouts/default
+include ../mixins/author-mixin
+
+block content
+	div.row
+		h2= book.name
+		p!= book.content.extended
+	div.row
+		+authorBlock(book.author)

@@ -1,0 +1,8 @@
+include image
+mixin bookBlock(book)
+    div.book-link
+        +imageTag(book.photo)
+        div
+            h2 
+                a(href='/catalogue/' + book.slug)= book.name	
+            p!=book.content.brief

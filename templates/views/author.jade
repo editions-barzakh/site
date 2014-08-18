@@ -1,0 +1,9 @@
+extends ../layouts/default
+
+block content
+	div.row
+		div
+			img(src=author.photo)
+		div
+			h2= author.name
+			p!= author.content.extended
