@@ -21,11 +21,22 @@ exports = module.exports = function(req, res) {
 				if (err) return res.err(err);
 				if (!author) return res.notfound('Auteur non trouvé');
 				locals.author = author;
+				locals.books = [];
+				keystone.list('Livre').model.find()
+					.where('state', 'publié')
+					.where('author', author.name)
+					.sort('publishedDate')
+					.exec(function(err, results) {			
+						if (err || !results.length) {
+							return next(err);
+						}
+						locals.books = results;	
+						next();
+					});		
 				next();
 			});
-
 	});
-	
+
 	// Render the view
 	view.render('author');	
 };

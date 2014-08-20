@@ -15,13 +15,16 @@ exports = module.exports = function(req, res) {
 	
 	// Load all books
 	view.on('init', function(next) {
-		keystone.list('Livre').model.find().exec(function(err, results) {			
-			if (err || !results.length) {
-				return next(err);
-			}
-			locals.data.books = results;	
-			next();
-		});		
+		keystone.list('Livre').model.find()
+			.where('state', 'publié')
+			.sort('publishedDate')
+			.exec(function(err, results) {			
+				if (err || !results.length) {
+					return next(err);
+				}
+				locals.data.books = results;	
+				next();
+			});		
 	});
 	
 	// Render the view

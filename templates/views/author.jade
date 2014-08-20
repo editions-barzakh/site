@@ -1,9 +1,16 @@
 extends ../layouts/default
+include ../mixins/image
+
 
 block content
-	div.row
-		div
-			img(src=author.photo)
-		div
+	div.row.content-header
+		div.2u
+			+imageTag(author.photo)
+		div.9u
 			h2= author.name
 			p!= author.content.extended
+	div.row
+		ul
+			each bookData in books
+				li
+					+bookBlock(bookData)

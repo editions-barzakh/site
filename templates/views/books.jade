@@ -2,5 +2,7 @@ extends ../layouts/default
 include ../mixins/book-mixin
 
 block content
-	each bookData in data.books
-		+bookBlock(bookData)
+	ul
+		each bookData in data.books
+			li
+				+bookBlock(bookData)
