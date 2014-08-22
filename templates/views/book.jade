@@ -2,8 +2,13 @@ extends ../layouts/default
 include ../mixins/author-mixin
 
 block content
-	div.row
-		h2= book.name
-		p!= book.content.extended
+	div.row.content-header
+		div.2u
+			+imageTag(book.photo)
+			p!= book.content.details
+		div.9u
+			h2= book.name
+			h4= book.publishedDate
+			p!= book.content.extended	
 	div.row
 		+authorBlock(book.author)

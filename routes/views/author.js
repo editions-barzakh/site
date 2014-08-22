@@ -24,16 +24,15 @@ exports = module.exports = function(req, res) {
 				locals.books = [];
 				keystone.list('Livre').model.find()
 					.where('state', 'publié')
-					.where('author', author.name)
+					.where('author', author)
 					.sort('publishedDate')
-					.exec(function(err, results) {			
-						if (err || !results.length) {
+					.exec(function(err, books) {
+						if (err || !books.length) {
 							return next(err);
 						}
-						locals.books = results;	
+						locals.books = books;
 						next();
-					});		
-				next();
+					});
 			});
 	});
 
