@@ -1,8 +1,9 @@
 include image
 mixin authorBlock(author)
-    div.content-link
-        +imageTag(author.photo)
-        div
-            h2
-                a(href='/auteurs/' + author.slug)= author.name
-            p!=author.content.brief
+	div.content-link.section.group
+		div.col.span_1_of_12
+			+imageTag(author.photo)
+		div.col.span_11_of_12
+			h2
+				a(href='/auteurs/' + author.slug)= author.name
+			p!=author.content.brief
