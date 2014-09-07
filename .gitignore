@@ -22,10 +22,8 @@ node_modules/
 public/images/*
 public/styles/site.min.css
 
-*.iml
 *.ipr
 *.iws
-.idea/
 
 docs/_dist
 coverage.html

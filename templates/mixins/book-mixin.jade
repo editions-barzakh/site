@@ -3,7 +3,7 @@ mixin bookBlock(book)
 	div.content-link.section.group
 		div.col.span_1_of_12
 			+imageTag(book.photo)
-		div.col.span_11_of_12
-			h2
-				a(href='/catalogue/' + book.slug)= book.name
+		div.col.span_11_of_12			
+			a(href='/catalogue/' + book.slug)
+				h2= book.name
 			p!=book.content.brief
