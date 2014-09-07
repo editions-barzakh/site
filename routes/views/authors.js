@@ -15,7 +15,9 @@ exports = module.exports = function(req, res) {
 	
 	// Load all authors
 	view.on('init', function(next) {
-		keystone.list('Auteur').model.find().exec(function(err, results) {			
+		keystone.list('Auteur').model.find()			
+		.where('state', 'publié')
+		.exec(function(err, results) {			
 			if (err || !results.length) {
 				return next(err);
 			}
