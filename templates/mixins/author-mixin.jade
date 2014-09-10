@@ -4,6 +4,6 @@ mixin authorBlock(author)
 		div.col.span_1_of_12
 			+imageTag(author.photo)
 		div.col.span_11_of_12
-			h2
+			h3
 				a(href='/auteurs/' + author.slug)= author.name
 			p!=author.content.brief

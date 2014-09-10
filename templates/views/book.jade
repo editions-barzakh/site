@@ -1,13 +1,19 @@
 extends ../layouts/default
-include ../mixins/author-mixin
+include ../mixins/image
 
 block content
 	div.section.group.content-header
 		div.col.span_2_of_12
 			+imageTag(book.photo)
-			p!= book.content.details
-		div.col.span_10_of_12.desc
+			div.details
+				p!= book.category
+				p!= book.details.width+" x "+book.details.height+" - "+book.details.nbPages+"p"
+		div.col.span_8_of_12.desc
 			h2= book.name
 			h4= book.publishedDate
 			p!= book.content.extended
-	+authorBlock(book.author)
+		div.col.span_2_of_12
+			h3
+				a(href='/auteurs/' + book.author.slug)= book.author.name
+			+imageTag(book.author.photo)
+			p.details!=book.author.content.brief

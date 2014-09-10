@@ -1,7 +1,11 @@
 .content-header {
 	img {
 		max-width: 12em;
-        margin: 0 2em 2em 0;
+        margin: 0 0.2em 0.2em 0;
+	}
+	.details {
+		font-size: 0.7em;
+		font-style: italic;
 	}
 	.desc
 	{
@@ -14,13 +18,20 @@
 .content-link {
     img {
         max-width: 5em;
+		margin-left: 1em;
         float: left;
-    }
-    a {
-        text-decoration: none;
     }
 }
 
-ul.content-list > li {
-	list-style-type: none;
+div.content-link:hover {
+	background-color: @grey;
+	cursor:pointer;
+	border-radius: 0.5em;
+}
+
+ul.content-list {
+	padding-left:0;
+	> li {
+		list-style-type: none;
+	}
 }

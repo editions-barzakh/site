@@ -1,14 +1,14 @@
 var keystone = require('keystone'),
 	Types = keystone.Field.Types;
 
-var PostCategory = new keystone.List('PostCategory', {
+var BookCategory = new keystone.List('CategorieLivre', {
 	autokey: { from: 'name', path: 'key' }
 });
 
-PostCategory.add({
+BookCategory.add({
 	name: { type: String, required: true }
 });
 
-PostCategory.relationship({ ref: 'Post', path: 'categories' });
+BookCategory.relationship({ ref: 'Livre', path: 'categories' });
 
-PostCategory.register();
+BookCategory.register();

@@ -5,5 +5,5 @@ mixin bookBlock(book)
 			+imageTag(book.photo)
 		div.col.span_11_of_12			
 			a(href='/catalogue/' + book.slug)
-				h2= book.name
+				h3= book.name
 			p!=book.content.brief
