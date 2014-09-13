@@ -26,20 +26,14 @@ html
 
 		//- HEADER
 		header.section.group
-			div#logo.col.span_5_of_12
+			div#logo.col.offset_4.span_4_of_12
 				h2
 					a(href="/")  <span class='barzakh-bracket'>[</span>&nbsp;barzakh&nbsp;<span class="barzakh-bracket">]</span>
-			nav#nav
-				ul
-					each link in navLinks
-						li.col.span_1_of_12(class=(section == link.key ? 'active' : null)): a(href=link.href)= link.label
-					if user
-						if user.canAccessKeystone
-							li: a(href='/keystone') Open Keystone
-						li.col.span_1_of_12: a(href='/keystone/signout') Sign Out
-					else
-						li.col.span_1_of_12: a(href='/keystone/signin') Sign In
-		
+		nav.section.group
+			ul
+				each link in navLinks
+					li.col.span_2_of_12(class=(section == link.key ? 'active' : null)): a(href=link.href)= link.label
+						
 		block banner
 		
 		main
@@ -59,8 +53,13 @@ html
 
 
 		//- FOOTER
-		.container: #footer
-
+		footer
+			if user
+					if user.canAccessKeystone
+						li: a(href='/keystone') Open Keystone
+					li.col.span_2_of_12: a(href='/keystone/signout') Sign Out
+				else
+					li.col.span_2_of_12: a(href='/keystone/signin') Sign In
 
 		//- JAVASCRIPT
 

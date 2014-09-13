@@ -13,7 +13,7 @@ block content
 			h4= book.publishedDate
 			p!= book.content.extended
 		div.col.span_2_of_12
+			+imageTag(book.author.photo)
 			h3
 				a(href='/auteurs/' + book.author.slug)= book.author.name
-			+imageTag(book.author.photo)
 			p.details!=book.author.content.brief

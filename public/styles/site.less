@@ -6,10 +6,11 @@
 
 //main
 body {
-	max-width: 92.3em;
+	max-width: 66.75em;
 	margin: 1em auto;
+	min-height: 100%;
 	background: @white;
-	font-family: 'Raleway';
+	font-family: 'Raleway','Georgia';
 	font-size: 0.9em;
 	font-weight: 300;
 	h2, h3 {
@@ -28,6 +29,10 @@ body {
 	a:visited {
 		color: @black;
 	}
+	
+	ul {
+		padding-left:0%;
+	}
 }
 
 //sub parts
@@ -36,3 +41,4 @@ body {
 @import "site/content.less";
 @import "site/logo.less";
 @import "site/nav.less";
+//@import "site/footer.less";
