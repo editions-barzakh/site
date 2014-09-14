@@ -4,9 +4,9 @@ include ../mixins/book-mixin
 
 block content
 	div.section.group.content-header
-		div.col.span_2_of_12
+		div.col.span_3_of_12
 			+imageTag(author.photo)
-		div.col.span_10_of_12.desc
+		div.col.span_7_of_12.desc
 			h2= author.name
 			p!= author.content.extended
 	ul.content-list

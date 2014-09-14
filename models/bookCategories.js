@@ -1,15 +1,15 @@
 var keystone = require('keystone'),
 	Types = keystone.Field.Types;
 
-var Book = new keystone.List('Livre', {
+var Category = new keystone.List('Catégories', {
 	map: { name: 'name' },
 	autokey: { path: 'slug', from: 'name', unique: true }
 });
 
-Book.add({
+Category.add({
 	name:	{ label: 'Nom', type: String, required: true },
 	slug:	{ type: String, index: true},
-	photo:	{ label: 'Photo', type: Types.LocalFile, required: true, initial: false, dest: "public/images"},
+	singulier:	{ type: String, index: true});
 	publishedDate:	{ type: Types.Date, index: true },
 	tags:	{ type: String, index: true, many: true},
 	author:	{ type: Types.Relationship, ref: 'Auteur', index: true },
@@ -23,7 +23,6 @@ Book.add({
 		width: 	{ label: 'Largeur', type: Types.Number},
 		height: { label: 'Hauteur', type: Types.Number},
 		nbPages:{ label: 'Nb Pages', type: Types.Number},
-		rights: { label: 'Droits', types: Types.String},
 		isbn: 	{ label: 'ISBN', type: String}
 	}
 });

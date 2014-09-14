@@ -3,17 +3,16 @@ include ../mixins/image
 
 block content
 	div.section.group.content-header
-		div.col.span_2_of_12
+		div.col.span_3_of_12
 			+imageTag(book.photo)
 			div.details
 				p!= book.category
 				p!= book.details.width+" x "+book.details.height+" - "+book.details.nbPages+"p"
-		div.col.span_8_of_12.desc
-			h2= book.name
-			h4= book.publishedDate
-			p!= book.content.extended
-		div.col.span_2_of_12
 			+imageTag(book.author.photo)
 			h3
 				a(href='/auteurs/' + book.author.slug)= book.author.name
 			p.details!=book.author.content.brief
+		div.col.span_7_of_12.desc
+			h2= book.name
+			h4= book.publishedDate
+			p!= book.content.extended
