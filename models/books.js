@@ -23,7 +23,7 @@ Book.add({
 		width: 	{ label: 'Largeur', type: Types.Number},
 		height: { label: 'Hauteur', type: Types.Number},
 		nbPages:{ label: 'Nb Pages', type: Types.Number},
-		rights: { label: 'Droits', types: Types.String},
+		rights: { label: 'Droits', type: String},
 		isbn: 	{ label: 'ISBN', type: String}
 	}
 });
