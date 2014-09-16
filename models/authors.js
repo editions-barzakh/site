@@ -12,8 +12,8 @@ Author.add({
 	slug: { type: String, index: true},
 	state: { label: 'Status', type: Types.Select, options: 'brouillon, publié, archivé', default: 'brouillon', index: true },		
 	content: {
-		brief: { label:'Chapeau',type: String, height: 100 },
-		extended: { label:'Bio', type: Types.Html, wysiwyg: true, height: 400 }
+		brief: { label:'Chapeau',type: String },
+		extended: { label:'Bio', type: Types.Html, wysiwyg: true, height: 200 }
 	}
 });
 

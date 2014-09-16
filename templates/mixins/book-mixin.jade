@@ -1,9 +1,9 @@
 include image
 mixin bookBlock(book)
 	div.content-link.section.group
-		div.col.span_1_of_12
+		div.col.span_1_of_12.offset_2
 			+imageTag(book.photo)
-		div.col.span_11_of_12
+		div.col.span_4_of_12
 			a(href='/catalogue/' + book.slug)
 				h3= book.name
 			p!=book.content.brief

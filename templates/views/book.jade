@@ -6,7 +6,7 @@ block content
 		div.col.span_3_of_12
 			+imageTag(book.photo)
 			div.details
-				p!= book.category
+				p!= book.category.singulier
 				p!= book.details.width+" x "+book.details.height+" - "+book.details.nbPages+"p"
 			+imageTag(book.author.photo)
 			h3
@@ -14,5 +14,5 @@ block content
 			p.details!=book.author.content.brief
 		div.col.span_7_of_12.desc
 			h2= book.name
-			h4= book.publishedDate
+			h4 #{(book.publishedDate.getMonth() + 1) + " / " + book.publishedDate.getFullYear()}
 			p!= book.content.extended

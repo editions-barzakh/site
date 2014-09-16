@@ -206,7 +206,7 @@ var livres = [{auth_id:15,cat_id:5,titre:'Abdelkader Djemaï, Trois Romans  ',de
 {auth_id:64,cat_id:4,titre:'La Nuit sur la figure',descr:'<p>A l’heure où la question de la migration, d’une actualité brûlante, est l’objet de manipulations et de visions réductrices, voici un livre qui propose des paroles et portraits de migrants.<br />Youssef, Yahia, Zacaria et tant d’autres viennent du Cameroun, du Nigeria, d’Algérie... Ils ont tous tenté l’aventure : la traversée du Sahara, celle de la Méditerranée. Chacun dit avec ses mots, nus, bruts, d’une poésie parfois bouleversante, sa solitude, ses espoirs. Leur répondent les photos de Kays Djilali, qui mettent en scène avec pudeur des silhouettes, des visages. Puisse ce livre, en sortant les migrants de l’ombre, leur rendre toute leur dignité.<br />Yasmina Khadra a rédigé une préface sans concession qui donne au livre son titre, cette « nuit sur la figure » inscrite dans le regard de tous ces anonymes à qui, enfin, la parole est rendue.</p>',status:1,photo:'64_image_1_110201090506.jpg',annee:2008,mois:1,largeur:21,hauteur:21,nb_pages:96,isbn:'978-9947-851-14-2',order:26,id_langue:2,droits:''},
 {auth_id:'67*66',cat_id:4,titre:'Les 1001 nuits autrement dit…',descr:'<p>Deux artistes, deux visions, deux univers oniriques, cruels, émouvants, terriblement subversifs…cet ouvrage propose donc les œuvres des artistes. Mais autour et à partir d’elles, se sont greffés des extraits de l’œuvre originale des 1001 nuits, des textes littéraires ou d’analyse déjà existants, et enfin, des écrits inédits rédigés pour la circonstance par des auteurs Algériens contemporains.<br />Combinaison d’images et de textes, imbrication d’univers et de fantasmes semblables et différents : ce catalogue-livre, objet délibérément hybride, revisite avec humour et rigueur, érotisme et poésie, ces fameuses « nuits » ; chacun s’en est emparé, libre et tout puissant…<br /><br /></p>',status:1,photo:'64_image_1_110207041850.jpg',annee:2006,mois:12,largeur:16,hauteur:19,nb_pages:96,isbn:'9961-892-56-9',order:40,id_langue:2,droits:''},
 {auth_id:68,cat_id:4,titre:'Algérie Indépendance',descr:'<p>Membre de la prestigieuse agence Magnum, Marc Riboud est envoyé en Algérie pour la première fois en 1960 pour couvrir la semaine des barricades érigées par les partisans de l’Algérie française.<br />Il y retourne ensuite régulièrement et va saisir, au cours de l’année 1962,  les moments décisifs de l’accession du peuple Algérien à l’indépendance. Rarement montrées dans la presse française de l’époque, méconnues par ailleurs du public Algérien, ces images réapparaissent aujourd’hui avec une force et une émotion incontestables.<br />Le livre s’articule autour d’une série d’images déclinées en différentes thématiques. ainsi, à la diversité des situations saisies, répond la rigueur d’un déroulé cohérent, fidèle du reste à la chronologie des événements :<br />- 1960 : les barricades à Alger ;<br />- Kabylie (avec, notamment, deux clichés mettant en scène<br />Krim Belkacem discutant avec un couple de l’OAS) ;<br />- les accords d’Évian ;<br />- scènes de liesse le 05 juillet 1962,  jour de la déclaration d’indépendance; etc.<br />Quant aux textes de Jean Daniel, Malek Alloula et Seloua Luste-Boulbina, ils replacent les photos dans leur contexte historique et politique et permettent de comprendre la démarche photographique de Marc Riboud.</p>',status:0,photo: null,annee:2011,mois:1,largeur:11,hauteur:19,nb_pages:96,isbn:'961-892-84-4',order:42,id_langue:2,droits:''},
-{auth_id:'40*60',cat_id:4,titre:'Cinq fragments du désert',descr:'<p>Cet ouvrage est une ode au désert, immensité à la beauté insolite, lyrique et métaphysique, qui toujours a nourri l’imaginaire humain. Proposé en édition bilingue français-arabe, ce livre réunit pour la première fois deux grands créateurs Algériens, Rachid Boudjedra et Rachid Koraïchi, qui se connaissent depuis longtemps et sont originaires de la même ville, Ain Beida (450 km à l’est d’Alger). A la poésie inquiète du premier répond l’imagination fertile du second, texte et illustrations entrent alors dans une magnifique résonnance. La traduction du français vers l’arabe est l’œuvre de Hakim Miloud, traducteur du recueil de poésie de Mohamed Dib, l’Aube Ismaël (Barzakh, 2001).</p>',status:1,photo:'64_image_1_110201085500.jpg',annee:2007,mois:11,largeur:21,hauteur:21,nb_pages:96,isbn:'978-9947-851-11-1',order:41,id_langue:'1*2',droits:'éditions barzakh/ACTES SUD, novembre 2007 pour la présente édition.'},
+{auth_id:'40*60',cat_id:4,titre:'Cinq fragments du désert (beau livre)',descr:'<p>Cet ouvrage est une ode au désert, immensité à la beauté insolite, lyrique et métaphysique, qui toujours a nourri l’imaginaire humain. Proposé en édition bilingue français-arabe, ce livre réunit pour la première fois deux grands créateurs Algériens, Rachid Boudjedra et Rachid Koraïchi, qui se connaissent depuis longtemps et sont originaires de la même ville, Ain Beida (450 km à l’est d’Alger). A la poésie inquiète du premier répond l’imagination fertile du second, texte et illustrations entrent alors dans une magnifique résonnance. La traduction du français vers l’arabe est l’œuvre de Hakim Miloud, traducteur du recueil de poésie de Mohamed Dib, l’Aube Ismaël (Barzakh, 2001).</p>',status:1,photo:'64_image_1_110201085500.jpg',annee:2007,mois:11,largeur:21,hauteur:21,nb_pages:96,isbn:'978-9947-851-11-1',order:41,id_langue:'1*2',droits:'éditions barzakh/ACTES SUD, novembre 2007 pour la présente édition.'},
 {auth_id:57,cat_id:4,titre:'Alger, un passage dans la lumière',descr:'<p>Au cœur d’Alger, un lieu mythique : le tunnel des Facultés. L’artiste Philippe Mouillon décide d’en bouleverser l’usage en projetant des œuvres d’ombres et de lumières, créations de plasticiens du monde entier. Il offre ainsi à la ville, aux piétons et aux automobilistes, un véritable musée d’art contemporain qui renouvelle leur quotidien et élargit leur imaginaire. Ce livre, à la croisée des genres, restitue cette aventure. Il mêle les images, que les artistes – Algériens, brésiliens, estoniens, indiens, sud-africains… – ont inventées pour l’occasion, à des textes littéraires et aux photographies d’Ammar Bouras. Tous dessinent la forme d’une ville et d’un lieu ouverts à la diversité un monde, vivants, en mouvement.</p>',status:1,photo:'64_image_1_110201092106.jpg',annee:2005,mois:0,largeur:30,hauteur:20,nb_pages:176,isbn:'9961-892-66-6',order:42,id_langue:'3*1*2',droits:'Le bec en l’air, 2005'},
 {auth_id:70,cat_id:6,titre:'Projet Urbain',descr:'<p>Trop de ruptures sont intervenues dans les théories et les pratiques de l’urbanisme et la réflexion doit être reprise à la base. Cet ouvrage, qui s’apparente à un manuel où se mêlent constats et analyses de la réalité et propositions, renoue donc consciemment avec les traités d’urbanisme du début du XXe siècle.<br /><br /></p>',status:1,photo:'64_image_1_110201091428.jpg',annee:2009,mois:0,largeur:15,hauteur:24,nb_pages:200,isbn:'978-9947-851-59-3',order:43,id_langue:2,droits:'© Éditions Parenthèses, 1999, 2002, 2005, 2009'},
 {auth_id:70,cat_id:6,titre:'Analyse Urbaine',descr:'<p>La connaissance et la compréhension d’une ville ne forcent pas l’évidence. Aussi convient-il d’élaborer une connaissance d’investigation en mêlant l’approche historique, la géographie, le travail cartographique, l’analyse architecturale, l’observation constructive et celle des modes de vie. En affirmant l’importance du dessin comme un moyen de comprendre et de rendre sensible.</p>',status:1,photo:'64_image_1_110131063255.jpg',annee:2009,mois:1,largeur:15,hauteur:24,nb_pages:200,isbn:'978-9947-851-58-6',order:44,id_langue:2,droits:'© Éditions Parenthèses, 1999, 2002, 2005, 2009'},
@@ -267,6 +267,9 @@ var livres = [{auth_id:15,cat_id:5,titre:'Abdelkader Djemaï, Trois Romans  ',de
 {auth_id:'129*127*128*126',cat_id:4,titre:'Voyage en Algérie antique',descr:'<p>Après avoir sillonné les rives de la Méditerranée et découvert les plus belles ruines antiques, l’immense photographe Ferrante Ferranti a pris la mesure d’un patrimoine antique Algérien aussi exceptionnel que méconnu. C’est, ici, à une véritable promenade, à la fois littéraire, poétique et didactique (de Tipasa, Cherchel à Hippone en passant par Djemila, Timgad, Tiddis, Khamissa et Madaure) que nous convie, entre autres, l’archéologue Sabah Ferdi. Quant aux photos de Ferrante Ferranti. elles révélent de manière inédite la beauté majestueuse de tous ces lieux.</p>',status:1,photo:'64_image_1_131202042511.jpg',annee:2013,mois:10,largeur:24,hauteur:29,nb_pages:224,isbn:'978-2-9931-325-57-4',order:0,id_langue:2,droits:''},
 {auth_id:130,cat_id:2,titre:'La crise berbère de 1949',descr:'A la mémoire de Ouali Bennaï et de Amar Ould-Hamouda, personnages hors du commun, monuments historiques sacrés d’une grande valeur militante, que l’on peut considérer comme les leaders les plus grands du mouvement national, des guides éclairés assassinés à la fleur de l’âge par leurs pairs, pour avoir porté haut et fort le flambeau de l’Amazighité forgée de larmes et de sang, pétrie de dignité, d’honneur, de fierté et d’éthique. Mourir pour la berbérie –Tamezgha, la patrie, noble et juste cause, présente dans leur vision, leur stratégie, leur esprit et leur cœur, dans leur démarche et dans leur action–, était leur destin. Leur sacrifice final pour cette terre d’Algérie qu’ils ont tant aimée, n’aura pas été vain, leur souvenir sera vivant et le devoir que chacune et chacun doit rendre à leur mémoire, est de poursuivre jusqu’à son terme l’œuvre à laquelle ils ont consacré leur vie jusqu’à ce que la mort les sépare. Ils attendent de nous de vivre pour eux, pour continuer leur combat et le réaliser.  Vers leur mémoire montera la gratitude de la nation, qui les honorera et les fera entrer dans l’histoire, le jour où la démocratie aura droit de cité dans ce pays.',status:1,photo:'64_image_1_140108083325.jpg',annee:2014,mois:1,largeur:15,hauteur:23,nb_pages:296,isbn:'978-9931-325-61-1',order:0,id_langue:2,droits:''}];
 
+var mapCategories = {};
+var mapAuteurs = {};
+
 
 function createCategorie(category, done) {	
 	var newCategory = new Category.model(category);
@@ -275,27 +278,74 @@ function createCategorie(category, done) {
 			console.error("Error adding category " + category.name + " to the database:");
 			console.error(err);
 		} else {
+			mapCategories[category.id] = newCategory;
 			console.log("Added category " + category.name + " to the database.");
 		}
 		done();
 	});	
 }
 
-
 function createAuteur(auteur, done) {
+	auteur.name = auteur.prename + " " + auteur.name;
+	auteur.content = {
+		extended : auteur.bio
+	};
+	auteur.photo = {
+		"filename" : auteur.img,
+		"path" : "public/images/auteurs",
+		"filetype" : "image/jpeg"
+	};
+	auteur.state = "publié";
 	var newAuteur = new Author.model(auteur);
 	newAuteur.save(function(err) {
 		if (err) {
 			console.error("Error adding auteur " + auteur.name + " to the database:");
 			console.error(err);
 		} else {
+			mapAuteurs[auteur.id] = newAuteur;
 			console.log("Added auteur " + auteur.name + " to the database.");
 		}
 		done();
 	});	
 }
 
+function createLivre(livre, done) {
+	livre.name = livre.titre;
+	livre.photo = {
+		"filename" : livre.photo,
+		"path" : "public/images/parutions",
+		"filetype" : "image/jpeg"
+	};
+	livre.author = mapAuteurs[livre.auth_id];
+	livre.category = mapCategories[livre.cat_id];
+	livre.content = {
+		extended: livre.descr
+	};
+	livre.details = {
+		width: livre.largeur,
+		height: livre.hauteur,
+		nbPages: livre.nb_pages,
+		rights: livre.droits,
+		isbn: livre.isbn
+	};
+	livre.state = "publié";
+	livre.publishedDate = new Date(livre.annee, livre.mois, 1);
+	var newLivre = new Book.model(livre);
+	newLivre.save(function(err) {
+		if (err) {
+			console.error("Error adding livre " + livre.name + " to the database:");
+			console.error(err);
+		} else {
+			console.log("Added livre " + livre.name + " to the database.");
+		}
+		done();
+	});	
+}
+
 exports = module.exports = function(done) {
-	async.forEach(categories, createCategorie, done);
-	async.forEach(auteurs, createAuteur, done);
+	async.forEach(categories, createCategorie, function() {
+		async.forEach(auteurs, createAuteur, function() {
+			async.forEach(livres, createLivre, done);
+		});
+	});		
 };

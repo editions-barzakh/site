@@ -14,7 +14,7 @@ Book.add({
 	tags:	{ type: String, index: true, many: true},
 	author:	{ type: Types.Relationship, ref: 'Auteur', index: true },
 	state:	{ label: 'Status', type: Types.Select, options: 'brouillon, publié, archivé', default: 'brouillon', index: true },
-	category:	{ label: 'Catégorie', type: Types.Select, options: 'Catalogue, Essai, Beau Livre, Littérature - Roman, Architecture et Urbanisme, Théâtre, Poésie, Littérature - Nouvelles', default: 'Littérature - Roman', index: true},
+	category:	{ type: Types.Relationship, ref: 'Catégories', index: true },
 	content: 	{
 		brief: { label:'Chapeau',type: String },
 		extended: { label:'Description', type: Types.Html, wysiwyg: true, height: 300 }		

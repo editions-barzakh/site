@@ -21,7 +21,10 @@ exports = module.exports = function(req, res) {
 				if (err) return res.err(err);
 				if (!book) return res.notfound('Livre non trouvé');
 				locals.book = book;
-				locals.book.populate('author', next);
+				locals.book.populate('category', function(){
+					locals.book.populate('author', next);
+				});
+				
 			});
 
 	});
