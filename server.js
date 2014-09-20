@@ -22,7 +22,8 @@ keystone.init({
 	'view engine': 'jade',
 	
 	'auto update': true,
-	
+	'port': 8080, 
+	'env': 'production',
 	'session': true,
 	'auth': true,
 	'user model': 'User',
