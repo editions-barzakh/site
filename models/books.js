@@ -9,7 +9,7 @@ var Book = new keystone.List('Livre', {
 Book.add({
 	name:	{ label: 'Nom', type: String, required: true },
 	slug:	{ type: String, index: true},
-	photo:	{ label: 'Photo', type: Types.LocalFile, required: true, initial: false, dest: "public/images"},
+	photo:	{ label: 'Photo', type: Types.LocalFile, required: true, initial: false, dest: "public/images/parutions"},
 	publishedDate:	{ type: Types.Date, index: true },
 	tags:	{ type: String, index: true, many: true},
 	author:	{ type: Types.Relationship, ref: 'Auteur', index: true },

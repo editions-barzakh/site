@@ -8,7 +8,7 @@ var Author = new keystone.List('Auteur', {
 
 Author.add({
 	name: { label: 'Nom', type: String, required: true },
-	photo: { label: 'Photo', type: Types.LocalFile, initial: false, dest: "public/images"},
+	photo: { label: 'Photo', type: Types.LocalFile, initial: false, dest: "public/images/auteurs"},
 	slug: { type: String, index: true},
 	state: { label: 'Status', type: Types.Select, options: 'brouillon, publié, archivé', default: 'brouillon', index: true },		
 	content: {
