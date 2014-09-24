@@ -7,12 +7,10 @@ block content
 			+imageTag(book.photo)
 			div.details
 				p!= book.category.singulier
-				p!= book.details.width+" x "+book.details.height+" - "+book.details.nbPages+"p"
-			+imageTag(book.author.photo)
-			h3
-				a(href='/auteurs/' + book.author.slug)= book.author.name
-			p.details!=book.author.content.brief
+				p!= book.details.width+" x "+book.details.height+" - "+book.details.nbPages+"p"			
 		div.col.span_7_of_12.desc
 			h2= book.name
-			h4 #{(book.publishedDate.getMonth() + 1) + " / " + book.publishedDate.getFullYear()}
+			h3
+				a(href='/auteurs/' + book.author.slug)= book.author.name
+			h4 #{book.date}
 			p!= book.content.extended

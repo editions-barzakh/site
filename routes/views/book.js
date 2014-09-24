@@ -1,5 +1,19 @@
 var keystone = require('keystone'),
-	async = require('async');
+	async = require('async'),
+	months = [
+		"Janvier",
+		"Février",
+		"Mars",
+		"Avril",
+		"Mai",
+		"Juin",
+		"Juillet",
+		"Aout",
+		"Septembre",
+		"Octobre",
+		"Novembre",
+		"Décembre"
+	];
 
 exports = module.exports = function(req, res) {
 	
@@ -21,12 +35,11 @@ exports = module.exports = function(req, res) {
 				if (err) return res.err(err);
 				if (!book) return res.notfound('Livre non trouvé');
 				locals.book = book;
+				locals.book.date = months[book.publishedDate.getMonth() || 0] + " " + book.publishedDate.getFullYear();
 				locals.book.populate('category', function(){
 					locals.book.populate('author', next);
-				});
-				
+				});				
 			});
-
 	});
 	
 	// Render the view
