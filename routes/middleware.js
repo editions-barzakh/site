@@ -10,8 +10,8 @@
 
 var _ = require('underscore'),
 	querystring = require('querystring'),
+	nav = require('../lib/nav'),
 	keystone = require('keystone');
-
 
 /**
 	Initialises the standard view locals
@@ -21,25 +21,12 @@ var _ = require('underscore'),
 	or replace it with your own templates / logic.
 */
 
-exports.initLocals = function(req, res, next) {
-	
-	var locals = res.locals;
-	
-	locals.navLinks = [
-		{ label: 'Accueil',		key: 'home',		href: '/' },
-		{ label: 'A propos',		key: 'about',		href: '/' },
-		{ label: 'Catalogue',		key: 'catalog',		href: '/catalogue' },
-		{ label: 'Actualités',		key: 'news',		href: '/' },
-		{ label: 'Presse',		key: 'press',		href: '/' },
-		{ label: 'Contact',		key: 'contact',		href: '/' }
-	];
-	
-	locals.user = req.user;
-	
-	next();
-	
+exports.initLocals = function(req, res, next) {	
+	var locals = res.locals;	
+	locals.nav = nav.structure;
+	locals.user = req.user;	
+	next();	
 };
-
 
 /**
 	Fetches and clears the flashMessages before a view is rendered

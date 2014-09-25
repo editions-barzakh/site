@@ -1,4 +1,5 @@
-var keystone = require('keystone');
+var keystone = require('keystone'),
+	nav = require('../../lib/nav');
 
 exports = module.exports = function(req, res) {
 	
@@ -6,9 +7,8 @@ exports = module.exports = function(req, res) {
 		view = new keystone.View(req, res);
 	
 	// Set locals
-	locals.section = 'home';
+	locals.section = nav.HOME;
 	
 	// Render the view
 	view.render('index');
-	
 }

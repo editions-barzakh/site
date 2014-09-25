@@ -48,10 +48,15 @@ exports.requireUser = function(req, res, next) {
 }
 // Views
 app.get('/', routes.views.index);
+app.get('/a-propos', routes.views.text);
 app.get('/auteurs', routes.views.authors);
 app.get('/auteurs/:author', routes.views.author);
 app.get('/catalogue', routes.views.books);
 app.get('/catalogue/:book', routes.views.book);
+app.get('/contact', routes.views.text);
+app.get('/actualite', routes.views.posts);
+app.get('/actualite/:post', routes.views.post);
+	
 	
 	
 	// NOTE: To protect a route so that only admins can see it, use the requireUser middleware:

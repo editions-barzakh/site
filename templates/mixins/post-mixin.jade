@@ -1,0 +1,9 @@
+include image
+mixin postBlock(post)
+	div.content-link.section.group
+		div.col.span_1_of_12.offset_2
+			+imageTag(post.photo)
+		div.col.span_4_of_12
+			a(href='/actualite/' + post.slug)
+				h3= post.title
+			p!=post.content.brief

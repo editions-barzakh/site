@@ -1,19 +1,8 @@
 var keystone = require('keystone'),
 	async = require('async'),
-	months = [
-		"Janvier",
-		"Février",
-		"Mars",
-		"Avril",
-		"Mai",
-		"Juin",
-		"Juillet",
-		"Aout",
-		"Septembre",
-		"Octobre",
-		"Novembre",
-		"Décembre"
-	];
+	nav = require('../../lib/nav'),
+	date = require('../../lib/date');
+
 
 exports = module.exports = function(req, res) {
 	
@@ -21,7 +10,7 @@ exports = module.exports = function(req, res) {
 		locals = res.locals;
 	
 	// Set locals
-	locals.section = 'catalog';
+	locals.section = nav.CATALOG;
 	locals.filters = {
 		book: req.params.book
 	};
@@ -35,7 +24,7 @@ exports = module.exports = function(req, res) {
 				if (err) return res.err(err);
 				if (!book) return res.notfound('Livre non trouvé');
 				locals.book = book;
-				locals.book.date = months[book.publishedDate.getMonth() || 0] + " " + book.publishedDate.getFullYear();
+				locals.book.date = date.displayDate(book.publishedDate);
 				locals.book.populate('category', function(){
 					locals.book.populate('author', next);
 				});				

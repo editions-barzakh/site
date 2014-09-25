@@ -8,26 +8,26 @@ exports = module.exports = function(req, res) {
 		locals = res.locals;
 	
 	// Init locals
-	locals.section = nav.CATALOG;
+	locals.section = nav.NEWS;
 	
 	locals.data = {
-		books: []
+		posts: []
 	};
 	
 	// Load all books
 	view.on('init', function(next) {
-		keystone.list('Livre').model.find()
+		keystone.list('Actualité').model.find()
 			.where('state', 'publié')
 			.sort('publishedDate')
 			.exec(function(err, results) {			
 				if (err || !results.length) {
 					return next(err);
 				}
-				locals.data.books = results;	
+				locals.data.posts = results;	
 				next();
 			});		
 	});
 	
 	// Render the view
-	view.render('books');	
+	view.render('posts');	
 }

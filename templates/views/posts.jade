@@ -1,0 +1,8 @@
+extends ../layouts/default
+include ../mixins/post-mixin
+
+block content
+	ul.content-list
+		each postData in data.posts
+			li
+				+postBlock(postData)

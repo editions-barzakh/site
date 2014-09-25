@@ -1,5 +1,6 @@
 var keystone = require('keystone'),
-	async = require('async');
+	async = require('async'),
+	nav = require('../../lib/nav');
 
 exports = module.exports = function(req, res) {
 	
@@ -7,7 +8,7 @@ exports = module.exports = function(req, res) {
 		locals = res.locals;
 	
 	// Init locals
-	locals.section = 'catalog';
+	locals.section = nav.CATALOG;
 	
 	locals.data = {
 		authors: []

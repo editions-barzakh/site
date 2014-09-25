@@ -1,5 +1,7 @@
 var keystone = require('keystone'),
-	async = require('async');
+	async = require('async'),
+	nav = require('../../lib/nav'),
+	date = require('../../lib/date'),
 
 exports = module.exports = function(req, res) {
 	
@@ -7,39 +9,27 @@ exports = module.exports = function(req, res) {
 		locals = res.locals;
 	
 	// Set locals
-	locals.section = 'blog';
+	locals.section = nav.NEWS;
 	locals.filters = {
 		post: req.params.post
 	};
 	locals.data = {
 		posts: []
 	};
-	
-	// Load the current post
+		
 	view.on('init', function(next) {
-		
-		var q = keystone.list('Post').model.findOne({
-			state: 'published',
-			slug: locals.filters.post
-		}).populate('author categories');
-		
-		q.exec(function(err, result) {
-			locals.data.post = result;
-			next(err);
-		});
-		
-	});
-	
-	// Load other posts
-	view.on('init', function(next) {
-		
-		var q = keystone.list('Post').model.find().where('state', 'published').sort('-publishedDate').populate('author').limit('4');
-		
-		q.exec(function(err, results) {
-			locals.data.posts = results;
-			next(err);
-		});
-		
+		keystone.list('Actualité').model.findOne()
+			.where('state', 'publié')
+			.where('slug', locals.filters.post)
+			.exec(function(err, post) {
+				if (err) return res.err(err);
+				if (!post) return res.notfound('Actualité non trouvée');
+				locals.post = post;
+				locals.post.date = date.displayDate(post.publishedDate);
+				locals.post.populate('category', function(){
+					locals.post.populate('author', next);
+				});				
+			});
 	});
 	
 	// Render the view
