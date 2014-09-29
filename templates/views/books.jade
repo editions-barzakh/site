@@ -1,8 +1,10 @@
 extends ../layouts/default
 include ../mixins/book-mixin
+include ../mixins/pagination-mixin
 
 block content
 	ul.content-list
-		each bookData in data.books
+		each bookData in data.books.results
 			li
 				+bookBlock(bookData)
+	+paginationBlock(data.books)

@@ -11,20 +11,22 @@ exports = module.exports = function(req, res) {
 	locals.section = nav.CATALOG;
 	
 	locals.data = {
-		books: []
+		books: {
+			results : []
+		}
 	};
 	
 	// Load all books
 	view.on('init', function(next) {
-		keystone.list('Livre').model.find()
-			.where('state', 'publié')
-			.sort('publishedDate')
+		keystone.list('Livre').paginate({
+				page: req.query.page || 1,
+				perPage: 10,
+				maxPages: 9
+			}).where('state', 'publié')
+			.sort('publishedDate')			
 			.exec(function(err, results) {			
-				if (err || !results.length) {
-					return next(err);
-				}
-				locals.data.books = results;	
-				next();
+				locals.data.books = results;
+				next(err);
 			});		
 	});
 	

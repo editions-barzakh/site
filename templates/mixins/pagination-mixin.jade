@@ -1,0 +1,13 @@
+mixin paginationBlock(pagination)
+		ul.section.group.pagination
+			if pagination.previous
+				li.col.span_1_of_12
+					a(href='?page=' + pagination.previous)
+						span: &lt;			
+			each p, i in pagination.pages
+				li.col.span_1_of_12(class=pagination.currentPage == p ? 'current' : null)
+					a(href='?page=' + (p == '...' ? (i ? pagination.totalPages : 1) : p ))= p
+			if pagination.next
+				li.col.span_1_of_12
+					a(href='?page=' + pagination.next)
+						span: &gt;
