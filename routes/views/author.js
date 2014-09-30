@@ -21,7 +21,7 @@ exports = module.exports = function(req, res) {
 			.where('slug', locals.filters.author)
 			.exec(function(err, author) {
 				if (err) return res.err(err);
-				if (!author) return res.notfound('Auteur non trouvé');
+				if (!author) return res.status('404').send('Auteur non trouvé');
 				locals.author = author;
 				locals.books = [];
 				keystone.list('Livre').model.find()

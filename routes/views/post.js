@@ -23,7 +23,7 @@ exports = module.exports = function(req, res) {
 			.where('slug', locals.filters.post)
 			.exec(function(err, post) {
 				if (err) return res.err(err);
-				if (!post) return res.notfound('Actualité non trouvée');
+				if (!post) return res.status('404').send('Actualité non trouvée');
 				locals.post = post;
 				locals.post.date = date.displayDate(post.publishedDate);
 				locals.post.populate('category', function(){
