@@ -23,7 +23,7 @@ var _ = require('underscore'),
 
 exports.initLocals = function(req, res, next) {	
 	var locals = res.locals;	
-	locals.nav = nav.structure;
+	locals.nav = nav;
 	locals.user = req.user;	
 	next();	
 };

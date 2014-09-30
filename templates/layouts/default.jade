@@ -31,8 +31,8 @@ html
 					a(href="/")  <span class='barzakh-bracket'>[</span>&nbsp;barzakh&nbsp;<span class="barzakh-bracket">]</span>
 		nav.section.group
 			ul
-				each val, key in nav
-					li.col.span_2_of_12(class=(section == key ? 'active' : null)): a(href=val.href)= val.label
+				each val, key in nav.structure
+					li.col.span_2_of_12(class=(section == key ? "active" : null)): a(href=val.href)= val.label
 						
 		block banner
 		
