@@ -1,9 +1,9 @@
 include image
 mixin postBlock(post)
-	div.content-link.section.group
-		div.col.span_1_of_12.offset_2
+	div.section.group.content-link
+		div.col.span_2_of_12
 			+imageTag(post.photo)
-		div.col.span_4_of_12
+		div.col.span_9_of_12.offset_1
 			a(href='/actualite/' + post.slug)
 				h3= post.title
 			p!=post.content.brief
