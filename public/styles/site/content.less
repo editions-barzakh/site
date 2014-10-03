@@ -7,10 +7,18 @@
 }
 
 div.content-link {
-	padding-left: 1%;
 	margin-top: 1%;
-	height: 11em;
+	min-height: 13em;
+	
+	img {
+		border-bottom-left-radius:0.3em;
+		border-top-left-radius:0.3em;
+		margin-top: 3%;
+		margin-left: 10%;
+	}
 }
+
+
 
 div.content-link:hover {
 	background-color: @grey;
@@ -19,8 +27,14 @@ div.content-link:hover {
 }
 
 ul.content-list {
-	display:table;
 	> li {
 		list-style-type: none;
 	}
+}
+
+@media only screen and (max-width: 480px) {
+	div.content-link {
+		padding-left: 3%;
+		margin-top: 1%;
+	}	
 }
