@@ -3,7 +3,8 @@
 require('dotenv')().load();
 
 // Require keystone
-var keystone = require('keystone');
+var keystone = require('keystone'),
+	static = require('./lib/static');
 
 // Initialise Keystone with your project's configuration.
 // See http://keystonejs.com/guide/config for available options
@@ -28,7 +29,6 @@ keystone.init({
 	'auth': true,
 	'user model': 'User',
 	'cookie secret': '7sO(?Zq+E|gvK^4xBK>VF$0OkbgM&oKb8>([1v8=bs=IHi/tvw-}-!V2fG)FP.Rv'
-	
 });
 
 // Load your project's Models
@@ -59,6 +59,9 @@ keystone.set('nav', {
 	'users': 'users'
 });
 
-// Start Keystone to connect to your database and initialise the web server
+//static.disableDefaultSetup(keystone);
 
+// Start Keystone to connect to your database and initialise the web server
 keystone.start();
+
+static.setup(keystone);
