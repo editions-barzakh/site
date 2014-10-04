@@ -3,6 +3,7 @@ include ../mixins/book-mixin
 include ../mixins/pagination-mixin
 
 block content
+	+paginationBlock(data.books)
 	ul.content-list
 		each bookData in data.books.results
 			li
