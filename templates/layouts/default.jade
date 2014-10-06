@@ -8,12 +8,7 @@ html
 		meta(http-equiv="content-type", content="text/html; charset=utf-8")
 		link(rel="shortcut icon", href="/favicon.ico", type="image/x-icon")
 		link(href='http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900', rel='stylesheet', type='text/css')
-		script(src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js")
 		link(href="/styles/site.min.css", rel="stylesheet")
-
-		//- This file provides the default styling for the KeystoneJS Content Editor
-		if user && user.canAccessKeystone
-			link(href="/keystone/styles/content/editor.min.css", rel="stylesheet")
 
 		//- Include template-specific stylesheets by extending the css block
 		block css
@@ -50,7 +45,4 @@ html
 		//- JAVASCRIPT		
 		script(src='/js/lib/jquery/jquery-2.1.0.min.js')
 		script(src='/js/barzakh.js')
-		script(src='/js/lib/bootstrap/bootstrap-3.1.0.min.js')
-		if user && user.canAccessKeystone
-			script(src='/keystone/js/content/editor.js')
 		block js
