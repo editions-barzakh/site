@@ -4,7 +4,24 @@ require('dotenv')().load();
 
 // Require keystone
 var keystone = require('keystone'),
-	static = require('./lib/static');
+	_ = require("underscore"),
+	static = require("./lib/static"),
+	rootOptions = {
+		index: false,
+		maxAge: '1d',
+		redirect: false,
+		setHeaders: function (res, path) {
+			res.set('x-timestamp', Date.now())
+		}
+	},
+	imgOptions = _.extend(rootOptions, {maxAge: '30d'}),
+	staticPaths = {
+		'public/fonts': rootOptions,
+		'public/images': imgOptions,
+		'public/styles': rootOptions,
+		'public/js': rootOptions
+	};
+		
 
 // Initialise Keystone with your project's configuration.
 // See http://keystonejs.com/guide/config for available options
@@ -16,12 +33,11 @@ keystone.init({
 	'brand': 'barzakh',
 	
 	'less': 'public',
-	'static': 'public',
-	'favicon': 'public/favicon.ico',
-	
+	'compress': true,
+	'static': 'public', //staticPaths,
+	'favicon': 'public/favicon.ico',	
 	'views': 'templates/views',
 	'view engine': 'jade',
-	
 	'auto update': true,
 	'port': 8080, 
 	'env': 'production',
@@ -59,7 +75,7 @@ keystone.set('nav', {
 	'users': 'users'
 });
 
-//static.disableDefaultSetup(keystone);
+static.disableDefaultSetup(keystone);
 
 // Start Keystone to connect to your database and initialise the web server
 keystone.start();
