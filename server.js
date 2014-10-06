@@ -41,7 +41,8 @@ keystone.init({
 	'auto update': true,
 	'port': 8080, 
 	'env': 'production',
-	'session': 'mongo',
+	'session': true,
+	'session store': 'mongo',
 	'auth': true,
 	'user model': 'User',
 	'cookie secret': '7sO(?Zq+E|gvK^4xBK>VF$0OkbgM&oKb8>([1v8=bs=IHi/tvw-}-!V2fG)FP.Rv'

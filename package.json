@@ -1,12 +1,12 @@
 {
   "name": "barzakh",
-  "version": "0.0.0",
+  "version": "0.6.0",
   "private": true,
   "dependencies": {
     "keystone": "~0.2.6",
     "async": "~0.2.9",
+    "connect-mongo": "^0.4.1",
     "underscore": "~1.5.2",
-	"express": "~3.3.8",
     "dotenv": "0.0.3"
   },
   "engines": {
