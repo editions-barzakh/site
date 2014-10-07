@@ -18,7 +18,7 @@ exports = module.exports = function(req, res) {
 	view.on('init', function(next) {
 		keystone.list('Actualité').model.find()
 			.where('state', 'publié')
-			.sort('publishedDate')
+			.sort({'publishedDate':'-1'})	
 			.exec(function(err, results) {			
 				if (err || !results.length) {
 					return next(err);

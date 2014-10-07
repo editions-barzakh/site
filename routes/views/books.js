@@ -23,7 +23,7 @@ exports = module.exports = function(req, res) {
 				perPage: 10,
 				maxPages: 9
 			}).where('state', 'publié')
-			.sort('publishedDate')			
+			.sort({'publishedDate':'-1'})			
 			.exec(function(err, results) {			
 				locals.data.books = results;
 				next(err);
