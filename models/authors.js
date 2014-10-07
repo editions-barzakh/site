@@ -13,7 +13,7 @@ Author.add({
 	state: { label: 'Status', type: Types.Select, options: 'brouillon, publié, archivé', default: 'brouillon', index: true },		
 	content: {
 		brief: { label:'Chapeau',type: String },
-		extended: { label:'Bio', type: Types.Html, wysiwyg: true, height: 200 }
+		extended: { label:'Bio', type: Types.Html, wysiwyg: true, height: 200, required: true, initial: true }
 	}
 });
 

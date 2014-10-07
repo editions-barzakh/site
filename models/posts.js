@@ -11,10 +11,10 @@ Post.add({
 	slug: { type: String, index: true },	
 	photo:	{ label: 'Photo', type: Types.LocalFile, required: true, initial: false, dest: "public/images/parutions"},
 	state:	{ label: 'Status', type: Types.Select, options: 'brouillon, publié, archivé', default: 'brouillon', index: true },
-	publishedDate: { type: Types.Date, index: true },
+	publishedDate: { type: Types.Date, index: true, required: true, initial: true },
 	content: {
-		brief: { type: Types.Html, wysiwyg: true, height: 150 },
-		extended: { type: Types.Html, wysiwyg: true, height: 400 }
+		brief: { type: Types.Html, wysiwyg: true, height: 150, required: true, initial: true },
+		extended: { type: Types.Html, wysiwyg: true, height: 400, required: true, initial: true }
 	},
 	categories: { type: Types.Relationship, ref: 'Types Actualité', many: true }
 });
