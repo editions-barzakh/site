@@ -3,8 +3,10 @@ include ../mixins/image
 
 block banner	
 	.banner.section.group
-		div.image.col.span_12_of_12
+		figure.col.span_12_of_12		
 			+imageTag(banner.photo)
+			figcaption
+				!= banner.content.extended
 
 block content
 	div.section.group.citation

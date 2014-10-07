@@ -2,15 +2,15 @@
 /* Banner                                                                        */
 /*********************************************************************************/
 
-.banner
-{
-	position: relative;
-	.image {
-		height:26em;
-		overflow: hidden;
+.banner {
+	figcaption {
+		float: right;
+		font-size: 0.6em;
 	}
-	.text { 
-		position: absolute; 
-		color: @white;
+}
+
+@media only screen and (max-width: 480px) {
+	.banner {
+		display: none;
 	}
 }
