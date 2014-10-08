@@ -35,17 +35,6 @@ var routes = {
 // Setup Route Bindings
 exports = module.exports = function(app) {
 
-app.all('/*', middleware.requireUser);
-
-exports.requireUser = function(req, res, next) {
-    if (!req.user) {
-        req.flash('error', 'Please Login.');
-        res.redirect('/signin');
-    } else {
-        next();
-    }
-
-}
 // Views
 app.get('/', routes.views.index);
 app.get('/a-propos', routes.views.text);
