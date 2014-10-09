@@ -8,7 +8,7 @@ exports = module.exports = function(req, res) {
 		section = req.url.substr(1);
 	
 	// Set locals
-	locals.section = section;
+	locals.section = section;	
 
 	view.on('init', function(next) {
 		keystone.list('Texte').model.findOne()

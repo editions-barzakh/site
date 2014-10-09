@@ -1,6 +1,9 @@
 extends ../layouts/default
 include ../mixins/image
 
+block title
+	!= post.title
+	
 block content
 	div.section.group.content-header
 		div.col.span_3_of_12

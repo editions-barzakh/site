@@ -2,6 +2,8 @@ extends ../layouts/default
 include ../mixins/image
 include ../mixins/book-mixin
 
+block title
+	!= author.name
 block content
 	div.section.group.content-header
 		div.col.span_3_of_12
