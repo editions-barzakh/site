@@ -12,7 +12,7 @@ Book.add({
 	photo:	{ label: 'Photo', type: Types.LocalFile, required: true, initial: false, dest: "public/images/parutions"},
 	publishedDate:	{ type: Types.Date, index: true, required: true, initial: true },
 	tags:	{ type: String, index: true, many: true},
-	author:	{ type: Types.Relationship, ref: 'Auteur', index: true },
+	author:	{ type: Types.Relationship, ref: 'Auteur', many: true },
 	state:	{ label: 'Status', type: Types.Select, options: 'brouillon, publié, archivé', default: 'brouillon', index: true },
 	category:	{ type: Types.Relationship, ref: 'Catégories', index: true },
 	content: 	{

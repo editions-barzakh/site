@@ -14,6 +14,8 @@ block content
 		div.col.span_7_of_12.desc
 			h2= book.name
 			h3
-				a(href='/auteurs/' + book.author.slug)= book.author.name
+				each author in book.author
+					a(href='/auteurs/' + author.slug)=author.name
+					br
 			h4 #{book.date}
 			p!= book.content.extended
