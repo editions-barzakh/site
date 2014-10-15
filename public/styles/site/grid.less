@@ -32,7 +32,7 @@
 
 /*  REMOVE MARGINS AS ALL GO FULL WIDTH AT 480 PIXELS */
 
-@media only screen and (max-width: 480px) {
+@media(max-width: @breakpoint) {
 	.col { 
 		margin: 1% 0 1% 0%;
 	}
@@ -55,9 +55,9 @@
 
 .grid(@nbColumns);
 
-/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+/*  GO FULL WIDTH AT LESS THAN N PIXELS */
 
-@media only screen and (max-width: 480px) {
+@media(max-width: @breakpoint) {
 	.grid_mobile(@n, @i: 1) when (@i =< @n) {
 		.span_@{i}_of_@{n} {
 			width: 100%;

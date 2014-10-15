@@ -3,6 +3,7 @@
 @white: #FFFFFF;
 @red: rgba(200, 57, 57,1);
 @grey: #e3e3e3;
+@breakpoint: 474px;
 
 //main
 body {
@@ -40,7 +41,7 @@ body {
 			font-size: 1.6em;
 		}
 	}
-	@media only screen and (max-width: 480px) {
+	@media(max-width: @breakpoint) {
 		img {
 			display: block;
 			width: 50%;
