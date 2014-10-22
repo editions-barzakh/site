@@ -15,7 +15,7 @@ block content
 			h2= book.name
 			h3
 				each author in book.author
-					a(href='/auteurs/' + author.slug)=author.name
+					a.author-link(href='/auteurs/' + author.slug)=author.name
 					br
 			h4 #{book.date}
 			p!= book.content.extended

@@ -1,6 +1,7 @@
 var keystone = require('keystone'),
 	async = require('async'),
-	nav = require('../../lib/nav');
+	nav = require('../../lib/nav'),
+	filters = require('./filters');
 
 exports = module.exports = function(req, res) {
 	
@@ -13,6 +14,8 @@ exports = module.exports = function(req, res) {
 	locals.data = {
 		authors: []
 	};
+	
+	filters(view, locals, req, res);
 	
 	// Load all authors
 	view.on('init', function(next) {

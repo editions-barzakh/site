@@ -1,0 +1,5 @@
+mixin filterBlock(currentFilter, filters)
+	ul.section.group.pagination.filter
+		each f, i in filters
+			li.col.span_1_of_12.filter(class= currentFilter == f.slug ? 'current' : null)
+				a(href= f.href ? f.href : '/catalogue?filter=' + f.slug)= f.name

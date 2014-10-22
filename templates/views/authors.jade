@@ -1,10 +1,12 @@
 extends ../layouts/default
 include ../mixins/author-mixin
 include ../mixins/letter-pagination-mixin
+include ../mixins/filters-mixin
 
 block content
-	+letterPaginationBlock(data.page)
+	+filterBlock(data.currentFilter || 'Tous', data.filters)
 	ul.content-list
 		each authorData in data.authors
 			li
 				+authorBlock(authorData)
+	+letterPaginationBlock(data.page)

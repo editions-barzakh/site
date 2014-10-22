@@ -1,11 +1,13 @@
 extends ../layouts/default
 include ../mixins/book-mixin
 include ../mixins/pagination-mixin
+include ../mixins/filters-mixin
 
 block content
-	+paginationBlock(data.books)
+	+filterBlock(data.currentFilter || 'Tous', data.filters)
 	ul.content-list
 		each bookData in data.books.results
 			li
 				+bookBlock(bookData)
-	+paginationBlock(data.books)
+	if data.books.totalPages > 1
+		+paginationBlock(data.books)
