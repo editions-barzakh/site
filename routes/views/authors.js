@@ -16,7 +16,9 @@ exports = module.exports = function(req, res) {
 	
 	// Load all authors
 	view.on('init', function(next) {
-		keystone.list('Auteur').model.find()			
+		locals.data.page = req.query.page || "A";
+		keystone.list('Auteur').model.find()
+		.where('name', new RegExp('^[A-Za-z]+ ' + locals.data.page))
 		.where('state', 'publié')
 		.exec(function(err, results) {			
 			if (err || !results.length) {

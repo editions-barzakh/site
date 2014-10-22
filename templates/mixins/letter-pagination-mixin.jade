@@ -1,0 +1,8 @@
+mixin letterPaginationBlock(page)
+		div.section.group.pagination
+			- var alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ", n = 0;
+			ul.col.span_12_of_12
+				while n < alphabet.length	    				
+					- var char = alphabet[n++]
+					li.letter(class=page == char ? 'current' : null)
+						a(href='?page=' + char)= char 

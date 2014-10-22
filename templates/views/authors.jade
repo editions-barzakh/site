@@ -1,7 +1,10 @@
 extends ../layouts/default
 include ../mixins/author-mixin
-
+include ../mixins/letter-pagination-mixin
 
 block content
-	each authorData in data.authors
-		+authorBlock(authorData)
+	+letterPaginationBlock(data.page)
+	ul.content-list
+		each authorData in data.authors
+			li
+				+authorBlock(authorData)
