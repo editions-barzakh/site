@@ -4,7 +4,7 @@ include ../mixins/pagination-mixin
 include ../mixins/filters-mixin
 
 block content
-	+filterBlock(data.currentFilter || 'Tous', data.filters)
+	+filterBlock(data.currentFilter || 'tous', data.filters)
 	ul.content-list
 		each bookData in data.books.results
 			li

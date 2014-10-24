@@ -43,6 +43,7 @@ exports = module.exports = function(req, res) {
 		} else {			
 			query.exec(function(err, results) {			
 				locals.data.books = results;
+				locals.data.books.filterString = '';
 				next(err);
 			});
 		}
