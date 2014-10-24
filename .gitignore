@@ -20,7 +20,7 @@ npm-debug.log
 
 node_modules/
 public/images/*
-public/styles/site.min.css
+public/styles/*.min.css
 
 *.ipr
 *.iws
