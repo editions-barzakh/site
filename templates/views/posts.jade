@@ -1,8 +1,11 @@
 extends ../layouts/default
 include ../mixins/post-mixin
+include ../mixins/pagination-mixin
 
 block content
 	ul.content-list
-		each postData in data.posts
+		each postData in data.posts.results
 			li
 				+postBlock(postData)
+	if data.posts.totalPages > 1
+		+paginationBlock(data.posts)
