@@ -32,12 +32,6 @@
 
 /*  REMOVE MARGINS AS ALL GO FULL WIDTH AT 480 PIXELS */
 
-@media(max-width: @breakpoint) {
-	.col { 
-		margin: 1% 0 1% 0%;
-	}
-}
-
 .col:first-child { margin-left: 0; } /* all browsers except IE6 and lower */
 /*  GRID */
 .grid(@n, @i: 1) when (@i =< @n) {
@@ -58,9 +52,15 @@
 /*  GO FULL WIDTH AT LESS THAN N PIXELS */
 
 @media(max-width: @breakpoint) {
-	.grid_mobile(@n, @i: 1) when (@i =< @n) {
+	
+	.col { 
+		margin: 1% 0 1% @margin;
+	}
+	
+	.grid_mobile(@n, @i: 1) when (@i =< @n) {	
+
 		.span_@{i}_of_@{n} {
-			width: 100%;
+			width: 100% - 2* @margin;
 		};
 
 		.offset_@{i},.col.offset_@{i}:first-child {
