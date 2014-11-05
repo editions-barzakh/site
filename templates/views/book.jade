@@ -9,8 +9,12 @@ block content
 		div.col.span_3_of_12
 			+imageTag(book.photo)
 			div.details
-				p!= book.category.singulier
-				p!= book.details.width+" x "+book.details.height+" - "+book.details.nbPages+"p"			
+				p 
+					a.filter-link(href='/catalogue?filter=' + book.category.slug)= book.category.singulier
+					if book.details.width && book.details.height
+						span!= " - " + book.details.width + " x " + book.details.height
+					if book.details.nbPages					
+						span!= " - " + book.details.nbPages+"p"	
 		div.col.span_7_of_12.desc
 			h2= book.name
 			h3
