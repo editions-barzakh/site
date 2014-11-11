@@ -3,12 +3,17 @@ include ../mixins/image
 block title
 	!= "Editions Barzakh"
 block banner	
-	.banner.section.group
-		figure.col.span_12_of_12		
-			+imageTag(banner.photo)
-			figcaption
-				!= banner.content.extended
-
+	.banner.section.group		
+			figure.col.span_12_of_12		
+				+imageTag(banner.photo)
+				figcaption
+					!= banner.content.extended
+			if posts
+				ul.featured
+					each postData in posts
+						li
+							a(href='/actualite/' + postData.slug)
+								h2!= postData.title
 block content
 	div.section.group.citation
 		div.offset_2.span_5_of_12

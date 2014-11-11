@@ -2,10 +2,27 @@
 /* Banner                                                                        */
 /*********************************************************************************/
 
-.banner {
+.banner {	
+	position: relative;
 	figcaption {
 		float: right;
 		font-size: 0.6em;
+	}
+	ul.featured {		
+		position:absolute;		
+		right: @margin;
+		bottom: 10%;
+		li {
+			list-style-type: none;
+			a {
+				font-size: bigger;
+				color: white;
+				h2:before {
+					content: " > ";					
+					color: @red;
+				}
+			}
+		}
 	}
 }
 

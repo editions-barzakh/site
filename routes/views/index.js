@@ -10,20 +10,30 @@ exports = module.exports = function(req, res) {
 	locals.section = nav.HOME;
 	
 	view.on('init', function(next) {
+		keystone.list('Actualité').model.find()
+			.where('state', 'publié')
+			.where('featured', true)
+			.sort('-publishedDate')
+			.limit(2)
+			.exec(function(err, posts) {				
+				locals.posts = posts;
+				next(err);
+			});
+	});	
+	
+	view.on('init', function(next) {
 		keystone.list('Texte').model.findOne()
 			.where('slug', 'banner')
 			.exec(function(err, text) {
-				if (!text) return res.status('404').send('Texte non trouvé');
 				locals.banner = text;
 				next(err);
 			});
-	});
+	});	
 	
 	view.on('init', function(next) {
 		keystone.list('Texte').model.findOne()
 			.where('slug', 'citation-1')
 			.exec(function(err, text) {
-				if (!text) return res.status('404').send('Texte non trouvé');
 				locals.citation1 = text;
 				next(err);
 			});
@@ -33,7 +43,6 @@ exports = module.exports = function(req, res) {
 		keystone.list('Texte').model.findOne()
 			.where('slug', 'citation-2')
 			.exec(function(err, text) {				
-				if (!text) return res.status('404').send('Texte non trouvé');
 				locals.citation2 = text;
 				next(err);
 			});

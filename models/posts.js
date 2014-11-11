@@ -10,6 +10,7 @@ Post.add({
 	title: { type: String, required: true },
 	slug: { type: String, index: true },	
 	photo:	{ label: 'Photo', type: Types.LocalFile, required: true, initial: false, dest: "public/images/parutions"},
+	featured: { label: 'Page accueil', type: Types.Boolean},
 	state:	{ label: 'Status', type: Types.Select, options: 'brouillon, publié, archivé', default: 'brouillon', index: true },
 	publishedDate: { type: Types.Date, index: true, required: true, initial: true },
 	content: {
