@@ -52,12 +52,10 @@
 /*  GO FULL WIDTH AT LESS THAN N PIXELS */
 
 @media(max-width: @breakpoint) {
-	
-	.col { 
+	.col {
 		margin: 1% 0 1% @margin;
 	}
-	
-	.grid_mobile(@n, @i: 1) when (@i =< @n) {	
+	.grid_mobile(@n, @i: 1) when (@i =< @n) {
 
 		.span_@{i}_of_@{n} {
 			width: 100% - 2* @margin;
