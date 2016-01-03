@@ -12,15 +12,11 @@
 div.content-link {
 	margin-top: 1%;
 	min-height: 13em;
-	
 	img {
 		border-radius: 0.5em;
 		margin-top: 4%;
-		margin-left: 10%;
 	}
 }
-
-
 
 div.content-link:hover {
 	background-color: @grey;
@@ -29,8 +25,17 @@ div.content-link:hover {
 }
 
 ul.content-list {
+	margin-left: @left-margin;
 	> li {
 		list-style-type: none;
+		img {
+			margin-left: 10%;
+		}
+		@media(max-width: @breakpoint) {
+			img {
+				margin: auto;
+			}
+		}
 	}
 }
 
@@ -38,5 +43,5 @@ ul.content-list {
 	div.content-link {
 		padding-left: 3%;
 		margin-top: 1%;
-	}	
+	}
 }

@@ -3,7 +3,7 @@ include ../mixins/image
 
 block title
 	!= book.name
-	
+
 block content
 	div.section.group.content-header
 		div.col.span_3_of_12
@@ -13,8 +13,8 @@ block content
 					a.filter-link(href='/catalogue?filter=' + book.category.slug)= book.category.singulier
 					if book.details.width && book.details.height
 						span!= " - " + book.details.width + " x " + book.details.height
-					if book.details.nbPages					
-						span!= " - " + book.details.nbPages+"p"	
+					if book.details.nbPages
+						span!= " - " + book.details.nbPages+"p"
 		div.col.span_7_of_12.desc
 			h2= book.name
 			h3
