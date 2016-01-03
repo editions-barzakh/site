@@ -6,4 +6,4 @@ mixin bookBlock(book)
 		div.col.span_9_of_12.offset_1
 			a(href='/catalogue/' + book.slug)
 				h3= book.name
-			p!=book.content.brief
+			p!= book.content.brief && book.content.brief.length > 20 ? book.content.brief : book.content.extended.substring(0,book.content.extended.indexOf(".",150) + 1)
